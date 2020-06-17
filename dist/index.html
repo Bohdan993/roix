@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/libs.min.css?v=1592349788723">
+    <link rel="stylesheet" href="css/main.min.css?v=1592349788723">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__layout">
+        <div class="center">
+          <h2 class="h2-title">Калькулятор ROIX</h2>
+          <div class="f-container">
+            <div class="header__units-wrapper">
+              <table class="header__units-data">
+                <caption class="table-caption">Выберите единицы измерения</caption>
+                <tbody class="header__units-data-body">
+                  <tr class="header__units-data-body-row">
+                    <td class="header__units-data-body-cell">
+                      <select class="header__units-select main-input">
+                        <option value="тыс.руб">тыс.руб</option>
+                        <option value="млн.руб">млн.руб</option>
+                        <option value="млрд.руб">млрд.руб</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="header__entry-data-wrapper">
+              <table class="header__entry-data">
+                <caption class="table-caption">Сумма выручки портфеля</caption>
+                <tbody class="header__entry-data-body">
+                  <tr class="header__entry-data-body-row">
+                    <td class="header__entry-data-body-cell">
+                      <div class="input-group">
+                        <input class="main-input input-curr" type="number" placeholder="Сейчас">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="header__entry-data-body-row">
+                    <td class="header__entry-data-body-cell">
+                      <div class="input-group">
+                        <input class="main-input input-want" type="number" placeholder="Хочу">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="slider-area">
+      <div class="slider-area__layout">
+        <div class="center">
+          <div class="f-container">
+            <div class="slider-area__wrapper">
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Удовлетворенность за прошлый год, %<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-prev-1">
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-prev-2">
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-prev-3">
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-prev-4">
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-prev-5">
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Удовлетворенность текущая, %<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-curr-1">
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-curr-2">
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-curr-3">
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-curr-4">
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-curr-5">
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell highlighted">
+                <p class="slider-area__item-title">Желаемая удовлетворенность<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-wanted-1">
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-wanted-2">
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-wanted-3">
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-wanted-4">
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider" id="satisfaction-wanted-5">
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Вес удовлетворенности в изминении выручки<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-2" id="satisfaction-weight-1">
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-2" id="satisfaction-weight-2">
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-2" id="satisfaction-weight-3">
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-2" id="satisfaction-weight-4">
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-2" id="satisfaction-weight-5">
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Выручка за последний год<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Прогнозная выручка за этот год<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-area__item-wrapper prompt-cell">
+                <p class="slider-area__item-title">Прибыльность клиента<span><span class="metric-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><i>
+                      <svg>
+                        <use xlink:href="img/sprites/svg/symbol/sprite.svg#question"></use>
+                      </svg></i></span></p>
+                <div class="slider-area__item">
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-3" id="client-profitability-1">
+                      <p>Клиент 1</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-3" id="client-profitability-2">
+                      <p>Клиент 2</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-3" id="client-profitability-3">
+                      <p>Клиент 3</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-3" id="client-profitability-4">
+                      <p>Клиент 4</p>
+                    </div>
+                  </div>
+                  <div class="slider-area__item-layer">
+                    <div class="no-ui-slider percent-slider-3" id="client-profitability-5">
+                      <p>Клиент 5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="count-table">
+      <div class="count-table__layout">
+        <div class="center">
+          <div class="f-container">
+            <div class="count-table__data-wrapper">
+              <table class="count-table__data">
+                <caption class="table-caption">Расчетные значения</caption>
+                <thead class="count-table__data-head">
+                  <tr class="count-table__data-head-row">
+                    <th class="count-table__data-head-cell prompt-cell desc-cell">
+                      <p>Руб</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Клиент 1</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Клиент 2</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Клиент 3</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Клиент 4</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Клиент 5</p>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell">
+                      <p>Всего</p><span></span>
+                    </th>
+                    <th class="count-table__data-head-cell prompt-cell roix">
+                      <p>Только с ROIX +</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="count-table__data-body">
+                  <tr class="count-table__data-body-row row-1">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Изменение удовлетворенности</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-2">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Прирост выручки</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-3">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>триггер прирост выручки</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-4">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Прирост выручки от изменения удовлетворенности</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-5">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>триггер прирост выручки от изменения удовлетворенности</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-6">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Доля выручки от удовлетворенноости в общей выручке</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-7">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>коэф. Интревала прироста</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0.2</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0.2</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-8">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>коэф. Размера прироста</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0.5</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0.5</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-9">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>коэф. Инвестиций</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0.01%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0.01%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-10">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Объем Инвестиций в удовлетворенность</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-11">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>триггер Объем инвестиций в удовлетворенность</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-12">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Итоговая прибыль после Инвестиций</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-13">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>триггер  Итоговая прибыль после Инвестиций</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-14">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>ROI от Инвестиций в  СХ</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-15">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Триггер 0</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-16">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Триггер 1</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                  <tr class="count-table__data-body-row row-17">
+                    <td class="count-table__data-body-cell desc-cell">
+                      <p>Результат: подходит для инвестиций</p>
+                    </td>
+                    <td class="count-table__data-body-cell first-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell second-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell third-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell forth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell fifth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell sixth-cell">
+                      <p>0%</p>
+                    </td>
+                    <td class="count-table__data-body-cell seventh-cell">
+                      <p>0%</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="test"></div>
+    <script src="js/libs.min.js?v=1592349788723" defer></script>
+    <script src="js/script.min.js?v=1592349788723" async></script>
+  </body>
+</html>

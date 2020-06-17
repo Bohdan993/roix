@@ -1,0 +1,71 @@
+.count-table__layout {
+		.fPa(30%, 30%, 30px, 30px, 1600px, 1920px);
+	}
+
+
+.count-table__data-wrapper {
+	width: 	100%;
+	// overflow-x: auto;
+}
+
+.count-table__data {
+	width: 	100%;
+	border-collapse: collapse;
+	// min-width: 800px;
+}
+
+.count-table__data-head {
+	.prompt-cell .metric-description {
+		color: @font-color;
+	}
+	.prompt-cell {
+		&:first-child {
+			border-left: 1px solid @secondary;
+		}
+	}
+	background: @main-color;
+	color: @white;
+	svg {
+		fill: @white;
+	}
+
+	p {
+		display: inline-block;
+		padding: 10px 0;
+	}
+}
+
+.count-table__data-body {
+	
+	box-shadow: 0 0 0 2px @secondary;
+	// display: block;	
+	// width: 	100%;
+	// border-collapse: separate;
+	// border: 2px solid black;
+ //  border-collapse: separate;
+ //  border-spacing: 4px; 
+	// border: 1px solid @secondary;
+	p {
+		width: 	100%;
+		text-align: center;
+		display: inline-block;
+		padding: 10px 0;
+	}
+}
+
+.count-table__data-body-cell {
+	&:not(:first-child) {
+		border-left:1px solid @white;
+	}
+	&:not(:last-child) {
+		border-right: 1px solid @white;
+	}
+}
+
+.count-table__data-body-row {
+	&:nth-child(odd){
+		.count-table__data-body-cell {
+			background: @secondary;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.popup
+	.popup__layer
+		.tap-popup-wrapper#callback-popup
+			.tap-popup
+				.tap-popup__content
+					form.tap-popup__form#tap-popup__form
+						input(type="hidden" name="subject" value="Форма фиксированная")
+						.form-group-wrap
+							i.material-icons.tap-popup__form-ico
+								|account_circle
+							.form-group.tap-popup__form-group
+								input#name.validate.text-field.tap-popup__text-field(placeholder='' type='text' name="name")
+								label(for='name')
+									|Ваше имя
+							
+						.form-group-wrap
+							//- i.material-icons.tap-popup__form-ico
+							//- 	|phone
+							.form-group.tap-popup__form-group
+								input#phone.validate.text-field.tap-popup__text-field(type='tel' placeholder='' name="phone" required)
+								label(for='phone')
+									|Ваш телефон
+						button.main-btn.teal.tap-popup__btn(type='submit' name='action')
+							span.btn-overlay
+							span.btn-text
+								|Отправить
+								i.material-icons.right send
+		.tap-popup-wave
+			a.btn-control.wave.tap-popup-open(data-open="#callback-popup")
+				i.material-icons.tap-close-ico
+					|phone
