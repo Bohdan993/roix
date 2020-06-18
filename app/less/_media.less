@@ -139,9 +139,31 @@
 		}
 
 		.desc-cell {
-			width: 12vw;
+			// width: 12vw;
 			display: block;
-			word-wrap: break-word
+			position: relative;
+			word-wrap: break-word;
+			position: relative;
+			height: 250px;
+
+			p {
+				  position: absolute;
+				  display: block;
+				  top: 0;
+				  left: 0;
+				  bottom: 0;
+				  // width: 3rem;
+				  height: 100%;
+				  background: rgba(221, 221, 221, 0.5);
+				  writing-mode: vertical-rl;
+				  display: flex;
+				  span {
+				  	 margin: auto;
+ 						 transform: rotate(180deg);
+ 						 line-height: 1;
+				  }
+				// transform-origin: center left
+			}
 		}
 		
 		.no-ui-slider {
