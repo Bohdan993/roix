@@ -1,17 +1,19 @@
-import { sliders, sliders4, sliders5, select, currInput} from '../view'
+import { sliders, sliders4, sliders5, select, currInput, wantSlider, nowSlider} from '../view'
 import InitSliders from './noUiSlidersInit'
 import {
 	calcSliderSum,
-	observeDimentions,
-	observeSliders
+	// observeDimentions,
+	observeSliders,
+	bindInputWithSlider
 } from '../model'
 
 
 const app = {
 	init() {
 		this.sliders();
-		this.observeDimentions()
+		// this.observeDimentions()
 		this.observeSliders()
+		this.binsInputWithSlider()
 	},
 
 	sliders(){
@@ -25,8 +27,8 @@ const app = {
 		})
 
 		window.addEventListener('load', function(){
-			calcSliderSum(sliders, sliders4)
-			calcSliderSum(sliders, sliders5)
+			calcSliderSum(sliders4)
+			calcSliderSum(sliders5)
 		})
 
 
@@ -34,13 +36,19 @@ const app = {
 	},
 
 	observeDimentions(){
-		observeDimentions({select})
+		// observeDimentions({select})
 	},
 	observeSliders(){
 		window.addEventListener('load', function(){
 			observeSliders({sliders})
 		})
 
+	},
+
+	binsInputWithSlider(){
+		window.addEventListener('load', function(){
+			bindInputWithSlider([wantSlider, nowSlider])
+		})
 	}
 
 

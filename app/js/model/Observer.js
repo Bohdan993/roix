@@ -11,7 +11,7 @@ export default class EventObserver {
 			this.observers = this.observers.filter((subscriber) => subscriber !== fn);
 		}
 
-		broadcast({data, param = ""}) {
-			this.observers.forEach((subscriber) => subscriber(data, param));
+		broadcast({data, target = ""}) {
+			this.observers.forEach((subscriber) => subscriber(data, target));
 		}
 }

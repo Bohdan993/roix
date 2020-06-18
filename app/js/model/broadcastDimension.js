@@ -48,5 +48,5 @@ function subscribeSliderTooltip(value){
 }
 
 export {
-	 observeDimentions
+	 // observeDimentions
 }

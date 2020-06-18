@@ -1,3 +1,5 @@
+const nowSlider = document.querySelector('#now-slider')
+const wantSlider = document.querySelector('#want-slider')
 
 const sliders1 = document.querySelectorAll('.percent-slider')
 const sliders2 = document.querySelectorAll('.percent-slider-2')
@@ -13,8 +15,9 @@ const currInput = document.querySelector('.input-curr')
 const wantInput = document.querySelector('.input-want')
 
 
-const maxValue = document.querySelectorAll('.slider-area__max-value .slider-area__currency')
-const minValue = document.querySelectorAll('.slider-area__min-value .slider-area__currency')
+const maxValue1 = document.querySelectorAll('.absolute-slider .slider-area__max-value .slider-area__summ')
+const maxValue2 = document.querySelectorAll('.absolute-slider-2 .slider-area__max-value .slider-area__summ')
+// const minValue = document.querySelectorAll('.slider-area__min-value .slider-area__summ')
 
 
 const rows = document.querySelectorAll('.count-table__data-body-row')
@@ -26,7 +29,11 @@ let rowsArr = [...rows].map((el, ind)=> {
 	return Array.from(el.children).splice(1).map(elem=> elem.firstElementChild)
 })
 
-// console.log(rowsArr)
+
+
+setInterval(function(){
+	// console.log(nowSlider)
+},500)
 
 
 
@@ -35,9 +42,11 @@ export {
 	sliders4,
 	sliders5,
 	select,
-	maxValue,
-	minValue,
+	maxValue1,
+	maxValue2,
 	currInput,
 	rows,
-	rowsArr
+	rowsArr,
+	nowSlider,
+	wantSlider
 }

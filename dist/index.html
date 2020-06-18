@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/libs.min.css?v=1592349788723">
-    <link rel="stylesheet" href="css/main.min.css?v=1592349788723">
+    <link rel="stylesheet" href="css/libs.min.css?v=1592423601571">
+    <link rel="stylesheet" href="css/main.min.css?v=1592423601571">
   </head>
   <body>
     <header class="header">
@@ -13,22 +13,6 @@
         <div class="center">
           <h2 class="h2-title">Калькулятор ROIX</h2>
           <div class="f-container">
-            <div class="header__units-wrapper">
-              <table class="header__units-data">
-                <caption class="table-caption">Выберите единицы измерения</caption>
-                <tbody class="header__units-data-body">
-                  <tr class="header__units-data-body-row">
-                    <td class="header__units-data-body-cell">
-                      <select class="header__units-select main-input">
-                        <option value="тыс.руб">тыс.руб</option>
-                        <option value="млн.руб">млн.руб</option>
-                        <option value="млрд.руб">млрд.руб</option>
-                      </select>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <div class="header__entry-data-wrapper">
               <table class="header__entry-data">
                 <caption class="table-caption">Сумма выручки портфеля</caption>
@@ -36,14 +20,16 @@
                   <tr class="header__entry-data-body-row">
                     <td class="header__entry-data-body-cell">
                       <div class="input-group">
-                        <input class="main-input input-curr" type="number" placeholder="Сейчас">
+                        <input class="main-input input-curr" type="number" placeholder="Сейчас" min="0" max="999">
+                        <div class="no-ui-slider header__slider" id="now-slider"></div>
                       </div>
                     </td>
                   </tr>
                   <tr class="header__entry-data-body-row">
                     <td class="header__entry-data-body-cell">
                       <div class="input-group">
-                        <input class="main-input input-want" type="number" placeholder="Хочу">
+                        <input class="main-input input-want" type="number" placeholder="Хочу" min="0" max="999">
+                        <div class="no-ui-slider header__slider" id="want-slider"></div>
                       </div>
                     </td>
                   </tr>
@@ -198,27 +184,27 @@
                       </svg></i></span></p>
                 <div class="slider-area__item">
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider" id="revenue-prev-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 1</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider" id="revenue-prev-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 2</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider" id="revenue-prev-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 3</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider" id="revenue-prev-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 4</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider" id="revenue-prev-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider" id="revenue-prev-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 5</p>
                     </div>
                   </div>
@@ -231,27 +217,27 @@
                       </svg></i></span></p>
                 <div class="slider-area__item">
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-1"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 1</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-2"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 2</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-3"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 3</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-4"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 4</p>
                     </div>
                   </div>
                   <div class="slider-area__item-layer">
-                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span><span class="slider-area__currency">тыс.руб</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span><span class="slider-area__currency">тыс.руб</span></span>
+                    <div class="no-ui-slider absolute-slider-2" id="revenue-curr-5"><span class="slider-area__max-value"><span class="slider-area__summ">100</span></span><span class="slider-area__min-value"><span class="slider-area__summ">1</span></span>
                       <p>Клиент 5</p>
                     </div>
                   </div>
@@ -752,25 +738,25 @@
                       <p>Результат: подходит для инвестиций</p>
                     </td>
                     <td class="count-table__data-body-cell first-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell second-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell third-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell forth-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell fifth-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell sixth-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                     <td class="count-table__data-body-cell seventh-cell">
-                      <p>0%</p>
+                      <p>-</p>
                     </td>
                   </tr>
                 </tbody>
@@ -781,7 +767,7 @@
       </div>
     </div>
     <div class="test"></div>
-    <script src="js/libs.min.js?v=1592349788723" defer></script>
-    <script src="js/script.min.js?v=1592349788723" async></script>
+    <script src="js/libs.min.js?v=1592423601572" defer></script>
+    <script src="js/script.min.js?v=1592423601572" async></script>
   </body>
 </html>

@@ -48,3 +48,28 @@
 		}
 	}
 }
+
+
+.header__slider {
+	height: 0px;
+	box-shadow: unset;
+	border: none;
+	.noUi-handle {
+		// right: -13px;
+		top: -13px;
+	  border-radius: 50%;
+	  height: 28px;
+	  width: 28px;
+	  border: 1px solid @main-color;
+	  background: @main-color;
+	  box-shadow: unset;
+	  cursor: pointer;
+	  &:before, &:after {
+	  	content: none;
+	  }
+	}
+
+	.noUi-connects {
+		display: none;
+	}
+}

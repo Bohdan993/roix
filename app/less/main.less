@@ -190,6 +190,17 @@ main {
   max-width: 100%;
   text-align: left;
   padding: 15px;
+  // font-size: 14/16* 1rem;
+
+  &::-moz-placeholder {
+    // font-size: 14/16 * 1rem;
+    color: #ccc;
+  }
+
+  &::-webkit-input-placeholder {
+    // font-size: 14/16 * 1rem;
+    color: #ccc;
+  }
 
 
   &:focus {
@@ -202,16 +213,16 @@ main {
 
 .input-group {
   position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: @main-color;
-    bottom: -14px;
-    left: 5px;
-  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 28px;
+  //   height: 28px;
+  //   border-radius: 50%;
+  //   background: @main-color;
+  //   bottom: -14px;
+  //   left: 5px;
+  // }
 }
 
 

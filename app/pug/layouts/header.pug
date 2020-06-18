@@ -4,20 +4,20 @@ header.header
 			h2.h2-title
 				|Калькулятор ROIX
 			.f-container
-				.header__units-wrapper
-					table.header__units-data
-						caption.table-caption
-							|Выберите единицы измерения
-						tbody.header__units-data-body
-							tr.header__units-data-body-row
-								td.header__units-data-body-cell
-									select.header__units-select.main-input
-										option(value="тыс.руб")
-											|тыс.руб
-										option(value="млн.руб")
-											|млн.руб
-										option(value="млрд.руб")
-											|млрд.руб
+				//- .header__units-wrapper
+				//- 	table.header__units-data
+				//- 		caption.table-caption
+				//- 			|Выберите единицы измерения
+				//- 		tbody.header__units-data-body
+				//- 			tr.header__units-data-body-row
+				//- 				td.header__units-data-body-cell
+				//- 					select.header__units-select.main-input
+				//- 						option(value="тыс.руб")
+				//- 							|тыс.руб
+				//- 						option(value="млн.руб")
+				//- 							|млн.руб
+				//- 						option(value="млрд.руб")
+				//- 							|млрд.руб
 				.header__entry-data-wrapper
 					table.header__entry-data
 						caption.table-caption
@@ -26,10 +26,12 @@ header.header
 							tr.header__entry-data-body-row
 								td.header__entry-data-body-cell
 									.input-group
-										input.main-input.input-curr(type="number" placeholder="Сейчас")
+										input.main-input.input-curr(type="number" placeholder="Сейчас" min="0" max="999")
+										#now-slider.no-ui-slider.header__slider
 							tr.header__entry-data-body-row
 								td.header__entry-data-body-cell
 									.input-group
-											input.main-input.input-want(type="number"  placeholder="Хочу")
+											input.main-input.input-want(type="number"  placeholder="Хочу" min="0" max="999")
+											#want-slider.no-ui-slider.header__slider
 
 

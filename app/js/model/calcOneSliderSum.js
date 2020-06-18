@@ -3,8 +3,9 @@ import { noUiSlider as n, wNumb } from '../../libs/libs'
 
 
 
-const calcSliderSum = (sliderGroup, currGroup) => {
-let summ = 300
+const calcSliderSum = (currGroup) => {
+
+
 let arr = []
 let valueArr = new Array(5).fill(0)
 let summValueArr = []
@@ -25,7 +26,9 @@ let summValueArr = []
 
 
 	function _doSmth(values, handle, unencoded, tap, positions, noUiSlider) {
+		let summ = noUiSlider.target.classList.contains('absolute-slider') ? +document.querySelector('.input-curr').value : +document.querySelector('.input-want').value
 
+		
 		//Индекс текущего слайдера в массиве
 		let index = [...currGroup].findIndex(el => el === this.target) 
 
@@ -110,6 +113,7 @@ let summValueArr = []
 				// else {
 
 				// }
+				console.log(summ)
 				arr[0].noUiSlider.updateOptions({
 					range: {
 						'min': 0,
