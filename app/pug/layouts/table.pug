@@ -10,51 +10,70 @@
 							tr.count-table__data-head-row
 								th.count-table__data-head-cell.prompt-cell
 									p
-										|Руб
-								th.count-table__data-head-cell.prompt-cell
-									p
-										|Клиент 1
-									//- span
-									//- 	span.metric-description
-									//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									//- 	i
-									//- 		+svg2('question')
-								th.count-table__data-head-cell.prompt-cell
-									p
-										|Клиент 2
-									//- span
-									//- 	span.metric-description
-									//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									//- 	i
-									//- 		+svg2('question')
-								th.count-table__data-head-cell.prompt-cell
-									p
-										|Клиент 3
-									//- span
-									//- 	span.metric-description
-									//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									//- 	i
-									//- 		+svg2('question')
-								th.count-table__data-head-cell.prompt-cell
-									p
-										|Клиент 4
-									//- span
-									//- 	span.metric-description
-									//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									//- 	i
-									//- 		+svg2('question')
-								th.count-table__data-head-cell.prompt-cell
-									p
-										|Клиент 5
-									//- span
-									//- 	span.metric-description
-									//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									//- 	i
-									//- 		+svg2('question')
+										|Параметр
+								th.count-table__data-head-cell.prompt-cell(colspan="5")
+									table
+										thead
+											tr
+												|Клиенты
+											tr
+												th
+													p
+														|1
+												th
+													p
+														|2
+												th
+													p
+														|3
+												th
+													p
+														|4
+												th
+													p
+														|5
+								//- 	p
+								//- 		|Клиент 1
+								//- 	//- span
+								//- 	//- 	span.metric-description
+								//- 	//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								//- 	//- 	i
+								//- 	//- 		+svg2('question')
+								//- th.count-table__data-head-cell.prompt-cell
+								//- 	p
+								//- 		|Клиент 2
+								//- 	//- span
+								//- 	//- 	span.metric-description
+								//- 	//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								//- 	//- 	i
+								//- 	//- 		+svg2('question')
+								//- th.count-table__data-head-cell.prompt-cell
+								//- 	p
+								//- 		|Клиент 3
+								//- 	//- span
+								//- 	//- 	span.metric-description
+								//- 	//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								//- 	//- 	i
+								//- 	//- 		+svg2('question')
+								//- th.count-table__data-head-cell.prompt-cell
+								//- 	p
+								//- 		|Клиент 4
+								//- 	//- span
+								//- 	//- 	span.metric-description
+								//- 	//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								//- 	//- 	i
+								//- 	//- 		+svg2('question')
+								//- th.count-table__data-head-cell.prompt-cell
+								//- 	p
+								//- 		|Клиент 5
+								//- 	//- span
+								//- 	//- 	span.metric-description
+								//- 	//- 		|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								//- 	//- 	i
+								//- 	//- 		+svg2('question')
 								th.count-table__data-head-cell.prompt-cell
 									p
 										|Всего
-									span
 										//- span.metric-description
 										//- 	|Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 										//- i
@@ -72,7 +91,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Изменение удовлетворенности
+											|&#916; удов-ти
 								td.count-table__data-body-cell.first-cell
 									p
 										|0%
@@ -98,7 +117,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Прирост выручки
+											|&#916; выручки
 								td.count-table__data-body-cell.first-cell
 									p
 										|0
@@ -120,7 +139,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-3
+							tr.count-table__data-body-row.row-3.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -146,11 +165,11 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-4
+							tr.count-table__data-body-row.row-4.hidden-row-mobile
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Прирост выручки от изменения удовлетворенности
+											|Прирост выручки от изменения удов-ти
 								td.count-table__data-body-cell.first-cell
 									p
 										|0
@@ -172,7 +191,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-5
+							tr.count-table__data-body-row.row-5.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -202,7 +221,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Доля выручки от удовлетворенноости в общей выручке
+											|Доля выручки от удов-ти в общей выручке
 								td.count-table__data-body-cell.first-cell
 									p
 										|0%
@@ -224,7 +243,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0%
-							tr.count-table__data-body-row.row-7
+							tr.count-table__data-body-row.row-7.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -250,7 +269,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0.2
-							tr.count-table__data-body-row.row-8
+							tr.count-table__data-body-row.row-8.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -276,7 +295,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0.5
-							tr.count-table__data-body-row.row-9
+							tr.count-table__data-body-row.row-9.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -306,7 +325,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Объем Инвестиций в удовлетворенность
+											|V инвестиций в удов-ть
 								td.count-table__data-body-cell.first-cell
 									p
 										|0
@@ -328,7 +347,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-11
+							tr.count-table__data-body-row.row-11.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -358,7 +377,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Итоговая прибыль после Инвестиций
+											|Прибыль после инвестиций
 								td.count-table__data-body-cell.first-cell
 									p
 										|0
@@ -380,7 +399,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-13
+							tr.count-table__data-body-row.row-13.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -432,7 +451,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0%
-							tr.count-table__data-body-row.row-15
+							tr.count-table__data-body-row.row-15.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -458,7 +477,7 @@
 								td.count-table__data-body-cell.seventh-cell
 									p
 										|0
-							tr.count-table__data-body-row.row-16
+							tr.count-table__data-body-row.row-16.hidden-row
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
@@ -488,7 +507,7 @@
 								td.count-table__data-body-cell.desc-cell
 									p
 										span
-											|Результат: подходит для инвестиций
+											|Результат
 								td.count-table__data-body-cell.first-cell
 									p
 										|-

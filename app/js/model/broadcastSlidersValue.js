@@ -6,6 +6,15 @@ import { rows, rowsArr } from '../view'
 
 
 
+function generateEvent(name, bubbles){
+	return new CustomEvent(name, {bubbles})
+}
+
+let event1 = generateEvent('roix+', true)
+let event2 = generateEvent('roix2+', true)
+let event3 = generateEvent('satisf', true)
+let event4 = generateEvent('satisf2', true)
+
 // let flag = []
 
 const observeSliders = ({ sliders })=> {
@@ -50,16 +59,16 @@ const observeSliders = ({ sliders })=> {
 				countRow1({obj, rowsArr, s1: 'satisfaction-wanted-2', s2: 'satisfaction-curr-2' })
 				drawRow1({obj, rowsArr, i: [0,1], s1: 'satisfaction-wanted-2', s2: 'satisfaction-curr-2' })
 				countRow7({obj, rowsArr, i: [6,1], s1: 'satisfaction-prev-2'})
-				countRow8({obj, rowsArr, i: [7,1], i2: [0, 1]})
-				countRow9({obj, rowsArr, i: [8,1], i2: [7,1], i3: [6,1]})
+				countRow8({obj, rowsArr, i: [7,1], i2: [0, 0]})
+				countRow9({obj, rowsArr, i: [8,1], i2: [7,0], i3: [6,0]})
 
 			} else if(el.id === 'satisfaction-wanted-3' || el.id === 'satisfaction-curr-3' || el.id === 'satisfaction-prev-3'){
 
 				countRow1({obj, rowsArr, s1: 'satisfaction-wanted-3', s2: 'satisfaction-curr-3' })
 				drawRow1({obj, rowsArr, i: [0,2], s1: 'satisfaction-wanted-3', s2: 'satisfaction-curr-3' })
 				countRow7({obj, rowsArr, i: [6,2], s1: 'satisfaction-prev-3'})
-				countRow8({obj, rowsArr, i: [7,2], i2: [0, 2]})
-				countRow9({obj, rowsArr, i: [8,2], i2: [7,2], i3: [6,2]})
+				countRow8({obj, rowsArr, i: [7,2], i2: [0, 0]})
+				countRow9({obj, rowsArr, i: [8,2], i2: [7,0], i3: [6,0]})
 
 				// console.log('fffgfg')
 
@@ -68,16 +77,16 @@ const observeSliders = ({ sliders })=> {
 				countRow1({obj, rowsArr, s1: 'satisfaction-wanted-4', s2: 'satisfaction-curr-4' })
 				drawRow1({obj, rowsArr, i: [0,3], s1: 'satisfaction-wanted-4', s2: 'satisfaction-curr-4' })
 				countRow7({obj, rowsArr, i: [6,3], s1: 'satisfaction-prev-4'})
-				countRow8({obj, rowsArr, i: [7,3], i2: [0, 3]})
-				countRow9({obj, rowsArr, i: [8,3], i2: [7,3], i3: [6,3]})
+				countRow8({obj, rowsArr, i: [7,3], i2: [0, 0]})
+				countRow9({obj, rowsArr, i: [8,3], i2: [7,0], i3: [6,0]})
 
 			} else if(el.id === 'satisfaction-wanted-5' || el.id === 'satisfaction-curr-5' || el.id === 'satisfaction-prev-5') {
 
 				countRow1({obj, rowsArr, s1: 'satisfaction-wanted-5', s2: 'satisfaction-curr-5' })
 				drawRow1({obj, rowsArr, i: [0,4], s1: 'satisfaction-wanted-5', s2: 'satisfaction-curr-5' })
 				countRow7({obj, rowsArr, i: [6,4], s1: 'satisfaction-prev-5'})
-				countRow8({obj, rowsArr, i: [7,4], i2: [0, 4]})
-				countRow9({obj, rowsArr, i: [8,4], i2: [7,4], i3: [6,4]})
+				countRow8({obj, rowsArr, i: [7,4], i2: [0, 0]})
+				countRow9({obj, rowsArr, i: [8,4], i2: [7,0], i3: [6,0]})
 
 			} else if(el.id === 'revenue-curr-1' || el.id === 'revenue-prev-1' || el.id === 'satisfaction-weight-1' || el.id === 'client-profitability-1') {
 
@@ -91,7 +100,7 @@ const observeSliders = ({ sliders })=> {
 				countRow17({obj, rowsArr, i: [16, 0], i2: [13, 0]})
 				countRow3({obj, rowsArr, i: [2,0], i2: [16,0], i3: [1,0]})
 				countRow5({obj, rowsArr, i: [4,0], i2: [16,0], i3: [3,0]})
-				countRow11({obj, rowsArr, i: [10,0], i2: [16,4], i3: [9,0]})
+				countRow11({obj, rowsArr, i: [10,0], i2: [16,0], i3: [9,0]})
 				countRow13({rowsArr, i: [12, 0], i2: [16, 0], i3: [11,0]})
 				countCell6Row2({rowsArr, i: [1,5], i1: [1, 0], i2: [1, 1], i3: [1, 2], i4: [1, 3], i5: [1, 4]})
 				countCell6Row4({rowsArr, i: [3,5], i1: [3, 0], i2: [3, 1], i3: [3, 2], i4: [3, 3], i5: [3, 4]})
@@ -102,6 +111,7 @@ const observeSliders = ({ sliders })=> {
 				countRow15({obj, rowsArr, i: [14, 0], i2: [16, 0], s1: 'satisfaction-curr-1', s2: 'revenue-prev-1'})
 				countRow16({obj, rowsArr, i: [15, 0], i2: [16, 0], s1: 'satisfaction-wanted-1', s2: 'revenue-curr-1'})
 				countCell6Row17({rowsArr, i: [16, 5], i2: [13, 5]})
+				countCell6Row5({rowsArr, i: [4, 5], i1: [16, 5], i2: [3, 5]})
 				countCell7Row1({obj, rowsArr, 
 				i:[0,6], i1:[15, 0], i2:[15, 1], i3:[15, 2], i4:[15, 3], i5:[15, 4], i6:[14, 0], i7:[14, 1], i8:[14, 2], i9:[14, 3], i10:[14, 4],
 				s1: 'revenue-curr-1', s2: 'revenue-curr-2', s3: 'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5',
@@ -112,6 +122,16 @@ const observeSliders = ({ sliders })=> {
 				countCell7Row6({rowsArr, i:[5, 6], 
 					i1:[5, 0] , i2:[5, 1] , i3:[5, 2] , i4:[5, 3] , i5: [5, 4], 
 					i6: [16,0], i7: [16,1], i8: [16,2], i9: [16,3], i10: [16,4]})
+				countCell7Row10({rowsArr, i:[9,6], i1: [10, 0], i2: [10, 1], i3: [10, 2], i4: [10, 3], i5: [10, 4]})
+				countCell7Row12({rowsArr, i: [11,6], i1:[11,0], i2:[11,1], i3:[11,2], i4:[11,3], i5:[11,4], i6:[11,5]})
+				countCell6Row15({obj, rowsArr, i: [14,5], i1: [14,0], i2: [14,1], i3: [14,2], i4: [14,3], i5: [14,4],
+ 				s1:'revenue-prev-1', s2:'revenue-prev-2', s3:'revenue-prev-3', s4: 'revenue-prev-4', s5: 'revenue-prev-5'})
+ 				countCell6Row16({obj, rowsArr, i: [15,5], i1: [15,0], i2: [15,1], i3: [15,2], i4: [15,3], i5: [15,4],
+				s1:'revenue-curr-1', s2:'revenue-curr-2', s3:'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5'})
+				countCell7Row14({obj,rowsArr, i: [13, 6], 
+				i1: [15, 0], i2: [15, 1], i3: [15, 2], i4: [15, 3], i5: [15, 4], 
+				i6: [11, 0], i7: [11, 1], i8: [11, 2], i9: [11, 3], i10: [11, 4], 
+				i11: [9, 0], i12: [9, 1], i13: [9, 2], i14: [9, 3], i15: [9, 4]})
 
 			} else if(el.id === 'revenue-curr-2' || el.id === 'revenue-prev-2' || el.id === 'satisfaction-weight-2' || el.id === 'client-profitability-2') {
 
@@ -125,7 +145,7 @@ const observeSliders = ({ sliders })=> {
 				countRow17({obj, rowsArr, i: [16, 1], i2: [13, 1]})
 				countRow3({obj, rowsArr, i: [2,1], i2: [16,1], i3: [1,1]})
 				countRow5({obj, rowsArr, i: [4,1], i2: [16,1], i3: [3,1]})
-				countRow11({obj, rowsArr, i: [10,1], i2: [16,4], i3: [9,1]})
+				countRow11({obj, rowsArr, i: [10,1], i2: [16,1], i3: [9,1]})
 				countRow13({rowsArr, i: [12, 1], i2: [16, 1], i3: [11,1]})
 				countCell6Row2({rowsArr, i: [1,5], i1: [1, 0], i2: [1, 1], i3: [1, 2], i4: [1, 3], i5: [1, 4]})
 				countCell6Row4({rowsArr, i: [3,5], i1: [3, 0], i2: [3, 1], i3: [3, 2], i4: [3, 3], i5: [3, 4]})
@@ -136,6 +156,7 @@ const observeSliders = ({ sliders })=> {
 				countRow15({obj, rowsArr, i: [14, 1], i2: [16, 1], s1: 'satisfaction-curr-2', s2: 'revenue-prev-2'})
 				countRow16({obj, rowsArr, i: [15, 1], i2: [16, 1], s1: 'satisfaction-wanted-2', s2: 'revenue-curr-2'})
 				countCell6Row17({rowsArr, i: [16, 5], i2: [13, 5]})
+				countCell6Row5({rowsArr, i: [4, 5], i1: [16, 5], i2: [3, 5]})
 				countCell7Row1({obj, rowsArr, 
 				i:[0,6], i1:[15, 0], i2:[15, 1], i3:[15, 2], i4:[15, 3], i5:[15, 4], i6:[14, 0], i7:[14, 1], i8:[14, 2], i9:[14, 3], i10:[14, 4],
 				s1: 'revenue-curr-1', s2: 'revenue-curr-2', s3: 'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5',
@@ -146,6 +167,16 @@ const observeSliders = ({ sliders })=> {
 				countCell7Row6({rowsArr, i:[5, 6], 
 					i1:[5, 0] , i2:[5, 1] , i3:[5, 2] , i4:[5, 3] , i5: [5, 4], 
 					i6: [16,0], i7: [16,1], i8: [16,2], i9: [16,3], i10: [16,4]})
+				countCell7Row10({rowsArr, i:[9,6], i1: [10, 0], i2: [10, 1], i3: [10, 2], i4: [10, 3], i5: [10, 4]})
+				countCell7Row12({rowsArr, i: [11,6], i1:[11,0], i2:[11,1], i3:[11,2], i4:[11,3], i5:[11,4], i6:[11,5]})
+				countCell6Row15({obj, rowsArr, i: [14,5], i1: [14,0], i2: [14,1], i3: [14,2], i4: [14,3], i5: [14,4],
+ 				s1:'revenue-prev-1', s2:'revenue-prev-2', s3:'revenue-prev-3', s4: 'revenue-prev-4', s5: 'revenue-prev-5'})
+ 				countCell6Row16({obj, rowsArr, i: [15,5], i1: [15,0], i2: [15,1], i3: [15,2], i4: [15,3], i5: [15,4],
+				s1:'revenue-curr-1', s2:'revenue-curr-2', s3:'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5'})
+				countCell7Row14({obj,rowsArr, i: [13, 6], 
+				i1: [15, 0], i2: [15, 1], i3: [15, 2], i4: [15, 3], i5: [15, 4], 
+				i6: [11, 0], i7: [11, 1], i8: [11, 2], i9: [11, 3], i10: [11, 4], 
+				i11: [9, 0], i12: [9, 1], i13: [9, 2], i14: [9, 3], i15: [9, 4]})
 
 			} else if(el.id === 'revenue-curr-3' || el.id === 'revenue-prev-3' || el.id === 'satisfaction-weight-3' || el.id === 'client-profitability-3') {
 
@@ -159,7 +190,7 @@ const observeSliders = ({ sliders })=> {
 				countRow17({obj, rowsArr, i: [16, 2], i2: [13, 2]})
 				countRow3({obj, rowsArr, i: [2,2], i2: [16,2], i3: [1,2]})
 				countRow5({obj, rowsArr, i: [4,2], i2: [16,2], i3: [3,2]})
-				countRow11({obj, rowsArr, i: [10,2], i2: [16,4], i3: [9,2]})
+				countRow11({obj, rowsArr, i: [10,2], i2: [16,2], i3: [9,2]})
 				countRow13({ rowsArr, i: [12, 2], i2: [16, 2], i3: [11,2]})
 				countCell6Row2({rowsArr, i: [1,5], i1: [1, 0], i2: [1, 1], i3: [1, 2], i4: [1, 3], i5: [1, 4]})
 				countCell6Row4({rowsArr, i: [3,5], i1: [3, 0], i2: [3, 1], i3: [3, 2], i4: [3, 3], i5: [3, 4]})
@@ -170,6 +201,7 @@ const observeSliders = ({ sliders })=> {
 				countRow15({ obj, rowsArr, i: [14, 2], i2: [16, 2], s1: 'satisfaction-curr-3', s2: 'revenue-prev-3'})
 				countRow16({obj, rowsArr, i: [15, 2], i2: [16, 2], s1: 'satisfaction-wanted-3', s2: 'revenue-curr-3'})
 				countCell6Row17({rowsArr, i: [16, 5], i2: [13, 5]})
+				countCell6Row5({rowsArr, i: [4, 5], i1: [16, 5], i2: [3, 5]})
 				countCell7Row1({obj, rowsArr, 
 				i:[0,6], i1:[15, 0], i2:[15, 1], i3:[15, 2], i4:[15, 3], i5:[15, 4], i6:[14, 0], i7:[14, 1], i8:[14, 2], i9:[14, 3], i10:[14, 4],
 				s1: 'revenue-curr-1', s2: 'revenue-curr-2', s3: 'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5',
@@ -180,6 +212,16 @@ const observeSliders = ({ sliders })=> {
 				countCell7Row6({rowsArr, i:[5, 6], 
 					i1:[5, 0] , i2:[5, 1] , i3:[5, 2] , i4:[5, 3] , i5: [5, 4], 
 					i6: [16,0], i7: [16,1], i8: [16,2], i9: [16,3], i10: [16,4]})
+				countCell7Row10({rowsArr, i:[9,6], i1: [10, 0], i2: [10, 1], i3: [10, 2], i4: [10, 3], i5: [10, 4]})
+				countCell7Row12({rowsArr, i: [11,6], i1:[11,0], i2:[11,1], i3:[11,2], i4:[11,3], i5:[11,4], i6:[11,5]})
+				countCell6Row15({obj, rowsArr, i: [14,5], i1: [14,0], i2: [14,1], i3: [14,2], i4: [14,3], i5: [14,4],
+ 				s1:'revenue-prev-1', s2:'revenue-prev-2', s3:'revenue-prev-3', s4: 'revenue-prev-4', s5: 'revenue-prev-5'})
+ 				countCell6Row16({obj, rowsArr, i: [15,5], i1: [15,0], i2: [15,1], i3: [15,2], i4: [15,3], i5: [15,4],
+				s1:'revenue-curr-1', s2:'revenue-curr-2', s3:'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5'})
+				countCell7Row14({obj,rowsArr, i: [13, 6], 
+				i1: [15, 0], i2: [15, 1], i3: [15, 2], i4: [15, 3], i5: [15, 4], 
+				i6: [11, 0], i7: [11, 1], i8: [11, 2], i9: [11, 3], i10: [11, 4], 
+				i11: [9, 0], i12: [9, 1], i13: [9, 2], i14: [9, 3], i15: [9, 4]})
 
 			} else if(el.id === 'revenue-curr-4' || el.id === 'revenue-prev-4' || el.id === 'satisfaction-weight-4' || el.id === 'client-profitability-4') {
 
@@ -193,7 +235,7 @@ const observeSliders = ({ sliders })=> {
 				countRow17({obj, rowsArr, i: [16, 3], i2: [13, 3]})
 				countRow3({obj, rowsArr, i: [2,3], i2: [16,3], i3: [1,3]})
 				countRow5({obj, rowsArr, i: [4,3], i2: [16,3], i3: [3,3]})
-				countRow11({obj, rowsArr, i: [10,3], i2: [16,4], i3: [9,3]})
+				countRow11({obj, rowsArr, i: [10,3], i2: [16,3], i3: [9,3]})
 				countRow13({ rowsArr, i: [12, 3], i2: [16, 3], i3: [11,3]})
 				countCell6Row2({rowsArr, i: [1,5], i1: [1, 0], i2: [1, 1], i3: [1, 2], i4: [1, 3], i5: [1, 4]})
 				countCell6Row4({rowsArr, i: [3,5], i1: [3, 0], i2: [3, 1], i3: [3, 2], i4: [3, 3], i5: [3, 4]})
@@ -204,6 +246,7 @@ const observeSliders = ({ sliders })=> {
 				countRow15({obj, rowsArr, i: [14, 3], i2: [16, 3], s1: 'satisfaction-curr-4', s2: 'revenue-prev-4'})
 				countRow16({obj, rowsArr, i: [15, 3], i2: [16, 3], s1: 'satisfaction-wanted-4', s2: 'revenue-curr-4'})
 				countCell6Row17({rowsArr, i: [16, 5], i2: [13, 5]})
+				countCell6Row5({rowsArr, i: [4, 5], i1: [16, 5], i2: [3, 5]})
 				countCell7Row1({obj, rowsArr, 
 				i:[0,6], i1:[15, 0], i2:[15, 1], i3:[15, 2], i4:[15, 3], i5:[15, 4], i6:[14, 0], i7:[14, 1], i8:[14, 2], i9:[14, 3], i10:[14, 4],
 				s1: 'revenue-curr-1', s2: 'revenue-curr-2', s3: 'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5',
@@ -214,6 +257,16 @@ const observeSliders = ({ sliders })=> {
 				countCell7Row6({rowsArr, i:[5, 6], 
 					i1:[5, 0] , i2:[5, 1] , i3:[5, 2] , i4:[5, 3] , i5: [5, 4], 
 					i6: [16,0], i7: [16,1], i8: [16,2], i9: [16,3], i10: [16,4]})
+				countCell7Row10({rowsArr, i:[9,6], i1: [10, 0], i2: [10, 1], i3: [10, 2], i4: [10, 3], i5: [10, 4]})
+				countCell7Row12({rowsArr, i: [11,6], i1:[11,0], i2:[11,1], i3:[11,2], i4:[11,3], i5:[11,4], i6:[11,5]})
+				countCell6Row15({obj, rowsArr, i: [14,5], i1: [14,0], i2: [14,1], i3: [14,2], i4: [14,3], i5: [14,4],
+ 				s1:'revenue-prev-1', s2:'revenue-prev-2', s3:'revenue-prev-3', s4: 'revenue-prev-4', s5: 'revenue-prev-5'})
+ 				countCell6Row16({obj, rowsArr, i: [15,5], i1: [15,0], i2: [15,1], i3: [15,2], i4: [15,3], i5: [15,4],
+				s1:'revenue-curr-1', s2:'revenue-curr-2', s3:'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5'})
+				countCell7Row14({obj,rowsArr, i: [13, 6], 
+				i1: [15, 0], i2: [15, 1], i3: [15, 2], i4: [15, 3], i5: [15, 4], 
+				i6: [11, 0], i7: [11, 1], i8: [11, 2], i9: [11, 3], i10: [11, 4], 
+				i11: [9, 0], i12: [9, 1], i13: [9, 2], i14: [9, 3], i15: [9, 4]})
 
 			} else if(el.id === 'revenue-curr-5' || el.id === 'revenue-prev-5' || el.id === 'satisfaction-weight-5' || el.id === 'client-profitability-5') {
 
@@ -238,6 +291,7 @@ const observeSliders = ({ sliders })=> {
 				countRow15({obj, rowsArr, i: [14, 4], i2: [16, 4], s1: 'satisfaction-curr-5', s2: 'revenue-prev-5'})
 				countRow16({obj, rowsArr, i: [15, 4], i2: [16, 4], s1: 'satisfaction-wanted-5', s2: 'revenue-curr-5'})
 				countCell6Row17({rowsArr, i: [16, 5], i2: [13, 5]})
+				countCell6Row5({rowsArr, i: [4, 5], i1: [16, 5], i2: [3, 5]})
 				countCell7Row1({obj, rowsArr, 
 				i:[0,6], i1:[15, 0], i2:[15, 1], i3:[15, 2], i4:[15, 3], i5:[15, 4], i6:[14, 0], i7:[14, 1], i8:[14, 2], i9:[14, 3], i10:[14, 4],
 				s1: 'revenue-curr-1', s2: 'revenue-curr-2', s3: 'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5',
@@ -248,12 +302,23 @@ const observeSliders = ({ sliders })=> {
 				countCell7Row6({rowsArr, i:[5, 6], 
 					i1:[5, 0] , i2:[5, 1] , i3:[5, 2] , i4:[5, 3] , i5: [5, 4], 
 					i6: [16,0], i7: [16,1], i8: [16,2], i9: [16,3], i10: [16,4]})
+				countCell7Row10({rowsArr, i:[9,6], i1: [10, 0], i2: [10, 1], i3: [10, 2], i4: [10, 3], i5: [10, 4]})
+				countCell7Row12({rowsArr, i: [11,6], i1:[11,0], i2:[11,1], i3:[11,2], i4:[11,3], i5:[11,4], i6:[11,5]})
+				countCell6Row15({obj, rowsArr, i: [14,5], i1: [14,0], i2: [14,1], i3: [14,2], i4: [14,3], i5: [14,4],
+ 				s1:'revenue-prev-1', s2:'revenue-prev-2', s3:'revenue-prev-3', s4: 'revenue-prev-4', s5: 'revenue-prev-5'})
+ 				countCell6Row16({obj, rowsArr, i: [15,5], i1: [15,0], i2: [15,1], i3: [15,2], i4: [15,3], i5: [15,4],
+				s1:'revenue-curr-1', s2:'revenue-curr-2', s3:'revenue-curr-3', s4: 'revenue-curr-4', s5: 'revenue-curr-5'})
+				countCell7Row14({obj,rowsArr, i: [13, 6], 
+				i1: [15, 0], i2: [15, 1], i3: [15, 2], i4: [15, 3], i5: [15, 4], 
+				i6: [11, 0], i7: [11, 1], i8: [11, 2], i9: [11, 3], i10: [11, 4], 
+				i11: [9, 0], i12: [9, 1], i13: [9, 2], i14: [9, 3], i15: [9, 4]})
 
 			}
 
 
 
 
+		
 
 				
 				
@@ -263,6 +328,7 @@ const observeSliders = ({ sliders })=> {
 				s3: 'satisfaction-prev-3', r3: 'revenue-prev-3', 
 				s4: 'satisfaction-prev-4', r4: 'revenue-prev-4',
 				s5: 'satisfaction-prev-5', r5: 'revenue-prev-5'}, calcPrevRevenueSumm)
+
 
 
 			let commonSatisfactionCurr = calcCommonSatisfactionPrevAndCurrAndWanted({obj,
@@ -280,12 +346,14 @@ const observeSliders = ({ sliders })=> {
 				s4: 'satisfaction-wanted-4', r4: 'revenue-curr-4',
 				s5: 'satisfaction-wanted-5', r5: 'revenue-curr-5'}, calcCurrRevenueSumm)
 
-				countCell6Row1({rowsArr, i: [0,5], n1:commonSatisfactionCurr, n2:commonSatisfactionPrev})
+				countCell6Row1({rowsArr, i: [0,5], n1:commonSatisfactionWanted, n2:commonSatisfactionCurr})
+
+
 			
 				
 				
 
-			
+
 
 
 				}
@@ -304,7 +372,7 @@ function countRow1({obj, rowsArr, s1, s2}){
 	obj[s1] = +obj[s1] || 20
 	obj[s2] = +obj[s2] || 20
 
-	return Math.round(obj[s1] - obj[s2]) + '%'
+	return Math.floor(obj[s1] - obj[s2]) + '%'
 }
 
 
@@ -344,7 +412,7 @@ function countRow3({obj, rowsArr, i, i2, i3}){
 	let str = rowsArr[i2[0]][i2[1]].textContent
 
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? +rowsArr[i3[0]][i3[1]].textContent : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? +rowsArr[i3[0]][i3[1]].textContent : 0
 
 	return
 
@@ -380,7 +448,7 @@ function countRow5({obj, rowsArr, i, i2, i3}){
 
 	// console.log(str)
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? +rowsArr[i3[0]][i3[1]].textContent : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? +rowsArr[i3[0]][i3[1]].textContent : 0
 
 	return
 
@@ -477,7 +545,7 @@ function countRow9({obj, rowsArr, i, i2, i3}){
 
 	// console.log(number)
 	// console.log(number2)
-	rowsArr[i[0]][i[1]].textContent = ((number * number2) / 10).toFixed(4) + "%"
+	rowsArr[i[0]][i[1]].textContent = ((number * number2) / 10).toFixed(3) + "%"
 
 	return
 
@@ -495,7 +563,7 @@ function countRow10({obj, rowsArr, i, i2, s1}){
 
 	let number = +rowsArr[i2[0]][i2[1]].textContent.replace(/[^-.\d]/gi, "")
 
-	rowsArr[i[0]][i[1]].textContent = ((number * obj[s1]) / 100).toFixed(5)
+	rowsArr[i[0]][i[1]].textContent = ((number * obj[s1]) / 100).toFixed(3)
 
 	return
 
@@ -512,9 +580,9 @@ function countRow11({obj, rowsArr, i, i2, i3}){
 
 	let str = rowsArr[i2[0]][i2[1]].textContent
 
-	// console.log(str)
+	// console.log(str === '+')
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? +rowsArr[i3[0]][i3[1]].textContent : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? +rowsArr[i3[0]][i3[1]].textContent : 0
 
 	return
 
@@ -538,6 +606,11 @@ function countRow12({obj, rowsArr, i, i2, i3, s1}){
 	// console.log('Obj[s1]', +obj[s1])
 	// console.log('Number', number)
 
+	// console.log('Client profitability:', obj[s1])
+	// console.log('Объем инвестиций в удовлетворенность:', number)
+	// console.log('Прирост выручки от изменения удовлетворенности:', number2)
+
+
 	rowsArr[i[0]][i[1]].textContent = (number2 * obj[s1] - number).toFixed(4)
 
 	return
@@ -555,7 +628,7 @@ function countRow13({rowsArr, i, i2, i3}){
 
 	// console.log(str)
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? +rowsArr[i3[0]][i3[1]].textContent : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? +rowsArr[i3[0]][i3[1]].textContent : 0
 
 	return
 
@@ -574,7 +647,7 @@ function countRow14({obj, rowsArr, i, i2, i3}){
 	let number2 = +rowsArr[i3[0]][i3[1]].textContent.replace(/[^-.\d]/gi, "")
 
 
-	// console.log(number, number2)
+	console.log(rowsArr[i2[0]][i2[1]].textContent, rowsArr[i3[0]][i3[1]].textContent)
 
 
 	if(number === 0){
@@ -602,7 +675,7 @@ function countRow15({obj, rowsArr, i, i2, s1, s2}){
 
 	let str = rowsArr[i2[0]][i2[1]].textContent
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? obj[s1] * obj[s2] : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? (obj[s1] * obj[s2])/100 : 0
 
 	return
 
@@ -620,7 +693,7 @@ function countRow16({obj, rowsArr, i, i2, s1, s2}){
 
 	let str = rowsArr[i2[0]][i2[1]].textContent
 
-	rowsArr[i[0]][i[1]].textContent = str === 'подходит' ? obj[s1] * obj[s2] : 0
+	rowsArr[i[0]][i[1]].textContent = str === '+' ? (obj[s1] * obj[s2])/100 : 0
 
 	return
 
@@ -640,16 +713,23 @@ function countRow17({rowsArr, i, i2}){
 	// console.log(number)
 
 
-	if(number >= 100){
+	if(number > 100){
 		res = 1
 	}
 	else{
 		res = 0
 	}
 
-	rowsArr[i[0]][i[1]].textContent = res === 1 ? 'подходит' : 'не подходит'
+	rowsArr[i[0]][i[1]].textContent = res === 1 ? '+' : '-'
 
-	res === 1 ? rowsArr[i[0]][i[1]].classList.add('is') :  rowsArr[i[0]][i[1]].classList.remove('is')
+
+	if(res === 1) {
+		rowsArr[i[0]][i[1]].classList.add('plus')
+		rowsArr[i[0]][i[1]].classList.remove('minus')
+	} else {
+		rowsArr[i[0]][i[1]].classList.remove('plus')
+		rowsArr[i[0]][i[1]].classList.add('minus')
+	}
 
 	return
 
@@ -788,6 +868,20 @@ function countCell6Row4({rowsArr, i, i1, i2, i3, i4, i5}){
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 
+function countCell6Row5({rowsArr, i, i1, i2}){
+
+	
+		let str = rowsArr[i1[0]][i2[1]].textContent
+
+		rowsArr[i[0]][i[1]].textContent = str === '+' ? +rowsArr[i2[0]][i2[1]].textContent : 0
+
+		return 
+}
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
 
 function countCell6Row6({rowsArr, i, i1, i2}){
 
@@ -825,7 +919,7 @@ function countCell6Row10({rowsArr, i, i1, i2, i3, i4, i5}){
 		// console.log(res)
 
 		rowsArr[i[0]][i[1]].textContent = res.toFixed(4)
-
+		rowsArr[i[0]][i[1]].dispatchEvent(event4)
 		return 
 }
 
@@ -872,7 +966,7 @@ function countCell6Row14({rowsArr, i, i1, i2}){
 			res = (r2/r1) * 100
 		}
 		rowsArr[i[0]][i[1]].textContent = res.toFixed(2) + "%"
-
+		rowsArr[i[0]][i[1]].dispatchEvent(event2)
 		return 
 }
 
@@ -893,13 +987,118 @@ function countCell6Row17({rowsArr, i, i2}){
 		res = 0
 	}
 
-	rowsArr[i[0]][i[1]].textContent = res === 1 ? 'подходит' : 'не подходит'
+	rowsArr[i[0]][i[1]].textContent = res === 1 ? '+' : '-'
 
 	res === 1 ? rowsArr[i[0]][i[1]].classList.add('is') :  rowsArr[i[0]][i[1]].classList.remove('is')
 
 	return
 
 }
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+function countCell6Row15({obj, rowsArr, i, i1, i2, i3, i4, i5, s1, s2, s3, s4, s5}){
+	
+
+	let res = 0
+
+	obj[s1] = +obj[s1] || 0
+	obj[s2] = +obj[s2] || 0
+	obj[s3] = +obj[s3] || 0
+	obj[s4] = +obj[s4] || 0
+	obj[s5] = +obj[s5] || 0
+
+
+
+	let r1 = +rowsArr[i1[0]][i1[1]].textContent || 0
+	let r2 = +rowsArr[i2[0]][i2[1]].textContent || 0
+	let r3 = +rowsArr[i3[0]][i3[1]].textContent || 0
+	let r4 = +rowsArr[i4[0]][i4[1]].textContent || 0
+	let r5 = +rowsArr[i5[0]][i5[1]].textContent || 0
+
+
+	if(r1 > 0) {
+		res += obj[s1]
+	}
+
+	if(r2 > 0) {
+		res += obj[s2]
+	}
+
+	if(r3 > 0) {
+		res += obj[s3]
+	}
+
+	if(r4 > 0) {
+		res += obj[s4]
+	}
+
+	if(r5 > 0) {
+		res += obj[s5]
+	}
+
+	rowsArr[i[0]][i[1]].textContent = res
+
+	return
+
+}
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+
+function countCell6Row16({obj, rowsArr, i, i1, i2, i3, i4, i5, s1, s2, s3, s4, s5}){
+	
+
+	let res = 0
+
+	obj[s1] = +obj[s1] || 0
+	obj[s2] = +obj[s2] || 0
+	obj[s3] = +obj[s3] || 0
+	obj[s4] = +obj[s4] || 0
+	obj[s5] = +obj[s5] || 0
+
+
+
+	let r1 = +rowsArr[i1[0]][i1[1]].textContent || 0
+	let r2 = +rowsArr[i2[0]][i2[1]].textContent || 0
+	let r3 = +rowsArr[i3[0]][i3[1]].textContent || 0
+	let r4 = +rowsArr[i4[0]][i4[1]].textContent || 0
+	let r5 = +rowsArr[i5[0]][i5[1]].textContent || 0
+
+
+	if(r1 > 0) {
+		res += obj[s1]
+	}
+
+	if(r2 > 0) {
+		res += obj[s2]
+	}
+
+	if(r3 > 0) {
+		res += obj[s3]
+	}
+
+	if(r4 > 0) {
+		res += obj[s4]
+	}
+
+	if(r5 > 0) {
+		res += obj[s5]
+	}
+
+	rowsArr[i[0]][i[1]].textContent = res
+
+	return
+
+}
+
+
+
 
 
 ////////////////////////////////////////////////
@@ -981,8 +1180,8 @@ function countCell7Row1({
 	}
 
 
-	let output = isNaN((((r1 + r2 + r3 + r4 + r5)/res) - ((r6 + r7 + r8 + r9 + r10)/res2))) ?  0 + '%' : (((r1 + r2 + r3 + r4 + r5)/res) - ((r6 + r7 + r8 + r9 + r10)/res2)) + '%'
-	console.log(obj[s1])
+	let output = isNaN((((r1 + r2 + r3 + r4 + r5)/res) - ((r6 + r7 + r8 + r9 + r10)/res2))) ?  0 + '%' : ((((r1 + r2 + r3 + r4 + r5)/res) - ((r6 + r7 + r8 + r9 + r10)/res2)) * 100).toFixed(1) + '%'
+	// console.log(obj[s1])
 
 	rowsArr[i[0]][i[1]].textContent = output
 
@@ -1028,7 +1227,7 @@ function countCell7Row4({rowsArr, i, i1, i2, i3, i4, i5}){
 	let res = r1 + r2 + r3 + r4 + r5
 
 
-	rowsArr[i[0]][i[1]].textContent = res
+	rowsArr[i[0]][i[1]].textContent = res.toFixed(2)
 
 
 	return
@@ -1057,31 +1256,163 @@ function countCell7Row6({rowsArr, i, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10}){
 	let r10 = rowsArr[i10[0]][i10[1]].textContent.trim()
 
 
-	if(r6 === 'подходит') {
-		r += r1
+	if(r6 === '+') {
+		res += r1
 	}
 
-	if(r7 === 'подходит') {
-		r += r2
+	if(r7 === '+') {
+		res += r2
 	}
 
-	if(r8 === 'подходит') {
-		r += r3
+	if(r8 === '+') {
+		res += r3
 	}
 
-	if(r9 === 'подходит') {
-		r += r4
+	if(r9 === '+') {
+		res += r4
 	}
 
-	if(r10 === 'подходит') {
-		r += r5
+	if(r10 === '+') {
+		res += r5
 	}
 
 
-	rowsArr[i[0]][i[1]].textContent = res + '%'
+	rowsArr[i[0]][i[1]].textContent = res.toFixed(2) + '%'
 
 	return
 }
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+function countCell7Row10({rowsArr, i, i1, i2, i3, i4, i5}){
+
+	let r1 = +rowsArr[i1[0]][i1[1]].textContent || 0
+	let r2 = +rowsArr[i2[0]][i2[1]].textContent || 0
+	let r3 = +rowsArr[i3[0]][i3[1]].textContent || 0
+	let r4 = +rowsArr[i4[0]][i4[1]].textContent || 0
+	let r5 = +rowsArr[i5[0]][i5[1]].textContent || 0
+
+	let res = r1 + r2 + r3 + r4 + r5
+
+
+	rowsArr[i[0]][i[1]].textContent = res.toFixed(1)
+	rowsArr[i[0]][i[1]].dispatchEvent(event3)
+
+	return
+}
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+function countCell7Row12({rowsArr, i, i1, i2, i3, i4, i5, i6}){
+
+	let r1 = +rowsArr[i1[0]][i1[1]].textContent || 0
+	let r2 = +rowsArr[i2[0]][i2[1]].textContent || 0
+	let r3 = +rowsArr[i3[0]][i3[1]].textContent || 0
+	let r4 = +rowsArr[i4[0]][i4[1]].textContent || 0
+	let r5 = +rowsArr[i5[0]][i5[1]].textContent || 0
+	let r6 = +rowsArr[i6[0]][i6[1]].textContent || 0
+
+	let res = r1 + r2 + r3 + r4 + r5 + r6
+
+
+	rowsArr[i[0]][i[1]].textContent = res.toFixed(4)
+
+
+	return
+}
+
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+function countCell7Row14({obj,rowsArr, i, 
+	i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15}){
+
+	let res1 = 0
+	let res2 = 0
+
+	let r1 = +rowsArr[i1[0]][i1[1]].textContent || 0
+	let r2 = +rowsArr[i2[0]][i2[1]].textContent || 0
+	let r3 = +rowsArr[i3[0]][i3[1]].textContent || 0
+	let r4 = +rowsArr[i4[0]][i4[1]].textContent || 0
+	let r5 = +rowsArr[i5[0]][i5[1]].textContent || 0
+	let r6 = +rowsArr[i6[0]][i6[1]].textContent || 0
+	let r7 = +rowsArr[i7[0]][i7[1]].textContent || 0
+	let r8 = +rowsArr[i8[0]][i8[1]].textContent || 0
+	let r9 = +rowsArr[i9[0]][i9[1]].textContent || 0
+	let r10 = +rowsArr[i10[0]][i10[1]].textContent || 0
+	let r11 = +rowsArr[i11[0]][i11[1]].textContent || 0
+	let r12 = +rowsArr[i12[0]][i12[1]].textContent || 0
+	let r13 = +rowsArr[i13[0]][i13[1]].textContent || 0
+	let r14 = +rowsArr[i14[0]][i14[1]].textContent || 0
+	let r15 = +rowsArr[i15[0]][i15[1]].textContent || 0
+
+
+	if(r1 > 0) {
+		res1 += r6
+	}
+
+	if(r2 > 0) {
+		res1 += r7
+	}
+
+	if(r3 > 0) {
+		res1 += r8
+	}
+
+	if(r4 > 0) {
+		res1 += r9
+	}
+
+	if(r5 > 0) {
+		res1 += r10
+	}
+
+
+
+	if(r1 > 0) {
+		res2 += r11
+	}
+
+	if(r2 > 0) {
+		res2 += r12
+	}
+
+	if(r3 > 0) {
+		res2 += r13
+	}
+
+	if(r4 > 0) {
+		res2 += r14
+	}
+
+	if(r5 > 0) {
+		res2 += r15
+	}
+
+
+
+	let output = isNaN(res1/res2) ?  0 + '%' : ((res1/res2) * 100).toFixed(2) + '%'
+
+
+
+	rowsArr[i[0]][i[1]].textContent = output
+
+	rowsArr[i[0]][i[1]].dispatchEvent(event1)
+
+
+
+	return
+}
+
 
 
 

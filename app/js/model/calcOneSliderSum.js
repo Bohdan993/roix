@@ -1,3 +1,4 @@
+
 import { noUiSlider as n, wNumb } from '../../libs/libs'
 
 
@@ -113,7 +114,10 @@ let summValueArr = []
 				// else {
 
 				// }
-				console.log(summ)
+				console.log('Summ:', summ)
+
+				console.log('SummValueArr', summValueArr)
+
 				arr[0].noUiSlider.updateOptions({
 					range: {
 						'min': 0,
@@ -129,7 +133,7 @@ let summValueArr = []
 					},
 					start: 0,
 				})
-				arr[1].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[0] ? summ - summValueArr[0] : 0)
+				arr[1].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[0] ? summ - summValueArr[0] > 0  ? summ - summValueArr[0] : 0 : 0)
 
 				arr[2].noUiSlider.updateOptions({
 					range: {
@@ -139,7 +143,7 @@ let summValueArr = []
 					},
 					start: 0,
 				})
-				arr[2].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[1] ? summ - summValueArr[1] : 0)
+				arr[2].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[1] ? summ - summValueArr[1] > 0  ? summ - summValueArr[1] : 0 : 0)
 
 
 				arr[3].noUiSlider.updateOptions({
@@ -149,7 +153,7 @@ let summValueArr = []
 					},
 					start: 0,
 				})
-				arr[3].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[2] ? summ - summValueArr[2] : 0)
+				arr[3].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summValueArr[2] ? summ - summValueArr[2] > 0  ? summ - summValueArr[2] : 0 : 0)
 
 
 				arr[4].noUiSlider.updateOptions({
@@ -159,7 +163,7 @@ let summValueArr = []
 					},
 					start: summValueArr[3] ? summ - (summValueArr[3]) : 0
 				})
-				arr[4].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.round(summ - (summValueArr[3])) <= 0 ? 0 : Math.round(summ - (summValueArr[3]))
+				arr[4].querySelector('.slider-area__max-value .slider-area__summ').textContent = Math.floor(summ - (summValueArr[3])) <= 0 ? 0 : Math.round(summ - (summValueArr[3]))
 
 			})
 

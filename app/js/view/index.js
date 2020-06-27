@@ -30,10 +30,13 @@ let rowsArr = [...rows].map((el, ind)=> {
 })
 
 
+const ctx = document.getElementById('myChart')
+const ctx2 = document.getElementById('myChart2')
 
-setInterval(function(){
-	// console.log(nowSlider)
-},500)
+
+const titles = document.querySelectorAll('.slider-area__item-title')
+
+
 
 
 
@@ -48,5 +51,8 @@ export {
 	rows,
 	rowsArr,
 	nowSlider,
-	wantSlider
+	wantSlider,
+	ctx,
+	ctx2,
+	titles
 }

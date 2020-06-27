@@ -1,10 +1,12 @@
-import { sliders, sliders4, sliders5, select, currInput, wantSlider, nowSlider} from '../view'
+import { sliders, sliders4, sliders5, select, currInput, wantSlider, nowSlider, titles} from '../view'
 import InitSliders from './noUiSlidersInit'
+import initChart from './initChart'
 import {
 	calcSliderSum,
 	// observeDimentions,
 	observeSliders,
-	bindInputWithSlider
+	bindInputWithSlider,
+	openSliders
 } from '../model'
 
 
@@ -14,6 +16,8 @@ const app = {
 		// this.observeDimentions()
 		this.observeSliders()
 		this.binsInputWithSlider()
+		this.chart()
+		this.openSliders()
 	},
 
 	sliders(){
@@ -49,6 +53,15 @@ const app = {
 		window.addEventListener('load', function(){
 			bindInputWithSlider([wantSlider, nowSlider])
 		})
+	},
+
+
+	chart() {
+		initChart();
+	},
+
+	openSliders() {
+		openSliders(titles);
 	}
 
 

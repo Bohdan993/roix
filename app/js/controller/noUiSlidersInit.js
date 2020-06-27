@@ -59,12 +59,12 @@ export default class InitSliders  {
 
 				this.__initSliders(nowSlider, {orientation: 'horizontal', direction: 'ltr', range: {
 					'min': 0,
-					'max': 999
+					'max': 99999
 				}, tooltips: null
 			})
 				this.__initSliders(wantSlider, {orientation: 'horizontal', direction: 'ltr', range: {
 					'min': 0,
-					'max': 999
+					'max': 999999
 				}, tooltips: null
 			})
 

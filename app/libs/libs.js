@@ -1,5 +1,6 @@
-import noUiSlider from 'nouislider';
+import noUiSlider from 'nouislider'
 import wNumb from 'wNumb'
+import Chart from 'chart.js'
 
 
 
@@ -7,5 +8,5 @@ import wNumb from 'wNumb'
 
 
 export {
-	noUiSlider, wNumb
+	noUiSlider, wNumb, Chart
 }

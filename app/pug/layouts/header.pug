@@ -3,6 +3,8 @@ header.header
 		.center
 			h2.h2-title
 				|Калькулятор ROIX
+			p.subtitle
+				|считаем возврат инвестиций в удовлетворённость
 			.f-container
 				//- .header__units-wrapper
 				//- 	table.header__units-data
@@ -21,17 +23,17 @@ header.header
 				.header__entry-data-wrapper
 					table.header__entry-data
 						caption.table-caption
-							|Сумма выручки портфеля
+							|Выручка от существующих клиентов в год, руб.
 						tbody.header__entry-data-body
 							tr.header__entry-data-body-row
 								td.header__entry-data-body-cell
 									.input-group
-										input.main-input.input-curr(type="number" placeholder="Сейчас" min="0" max="999")
+										input.main-input.input-curr(type="number" placeholder="Сейчас" min="0")
 										#now-slider.no-ui-slider.header__slider
 							tr.header__entry-data-body-row
 								td.header__entry-data-body-cell
 									.input-group
-											input.main-input.input-want(type="number"  placeholder="Хочу" min="0" max="999")
+											input.main-input.input-want(type="number"  placeholder="Хочу" min="0")
 											#want-slider.no-ui-slider.header__slider
 
 

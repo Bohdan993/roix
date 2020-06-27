@@ -20,9 +20,15 @@ const bindInputWithSlider = (slider) => {
 
 
 		el.parentNode.firstElementChild.addEventListener('input', function(){
-			this.value = +this.value >= +this.getAttribute('max') ? +this.getAttribute('max') : +this.value
+			this.value = +this.value
 			this.value = +this.value <= +this.getAttribute('min') ? +this.getAttribute('min') : +this.value
 			el.noUiSlider.set(+this.value)
+			// el.noUiSlider.updateOptions({
+			// 	range: {
+			// 		min: 0,
+			// 		max: +this.value
+			// 						}
+			// }, true)
 		})
 
 
